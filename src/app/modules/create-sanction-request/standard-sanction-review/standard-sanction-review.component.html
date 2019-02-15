@@ -1,0 +1,83 @@
+<div class="clearfix"></div>
+<div class="row" style="margin-top:20px">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+
+    <div class="x_panel">
+
+      <div>
+        <div class="row" style="margin-top:20px">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-5">
+                <label style="font-weight:bold">Activity Type: </label>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-7">
+                <p>{{masterData.get('sanctionActivityType').value}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-5">
+                <label style="font-weight:bold">Policy Type :</label>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-7">
+                <p>{{masterData.get('policyType').value}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-5">
+                <label style="font-weight:bold">Sanction Type :</label>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-7">
+                <p>{{masterData.get('sanctionFormType').value}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-5">
+                <label style="font-weight:bold">Policy No :</label>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-7">
+                <p>{{masterData.get('policyNumber').value}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-5">
+                <label style="font-weight:bold">Claim Date :</label>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-7">
+                <p>{{masterData.get('claimDate').value}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-5">
+                <label style="font-weight:bold">Claim Details :</label>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-7">
+                <p>{{masterData.get('claimDetails').value}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div *ngIf="masterData.get('sanctionFormType').value =='Insurance or Reinsurance Form'">
+        <app-standard-sanction [masterObject]='masterData' [disabledVal]='true'></app-standard-sanction>
+      </div>
+    </div>
+  </div>
+</div>
